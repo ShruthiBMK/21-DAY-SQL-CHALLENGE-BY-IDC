@@ -4,6 +4,8 @@
 This repository contains my solutions and learnings from the IDC 21-Day SQL Challenge.
 The challenge focuses on strengthening SQL fundamentals through daily problem-solving, real-world datasets, and industry-style queries.
 
+Thanks to @DPDzero and @indiandataclub for the challenge!
+
 ### Objectives
 
 - Build strong SQL query-writing skills
