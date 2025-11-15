@@ -15,14 +15,14 @@ WHERE event IS NOT NULL
 -- DAY 12 challenge
 -- Analyze the event impact by comparing weeks with events vs weeks without events. Show: event status ('With Event' or 'No Event'),
  -- count of weeks, average patient satisfaction, and average staff morale.  Order by average patient satisfaction descending.
- SELECT service,
+SELECT
 	CASE
-    WHEN event = "none" THEN 'No event'
+    WHEN event = 'none' THEN 'No event'
 	ELSE 'With event' 
     END AS event_status,
-   COUNT(DISTINCT week) AS no_of_weeks,
+   COUNT(week) AS no_of_weeks,
    ROUND(AVG(patients_satisfaction),2) AS avg_patient_satisfaction,
    ROUND(AVG(staff_morale),2) AS avg_staff_morale
 FROM services_weekly
-GROUP BY service, event_status
+GROUP BY event_status
 ORDER BY avg_patient_satisfaction DESC;
